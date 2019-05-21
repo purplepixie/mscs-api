@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>API Example</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>API Example</h1>
+    X = <input type="text" id="x" value="10"><br />
+    Y = <input type="text" id="y" value="20"><br />
+    Answer = <span id="answer">Unknown</span>
+    <br /><br />
+    <button id="add">Add</button><br />
+
+</body>
+<script type="text/javascript">
+    $("#add").click(function(){
+        var data = {
+            "x": $("#x").val(),
+            "y": $("#y").val()
+        };
+        $.post("api.php/add",data,function(data,status,xhr){
+            $("#answer").html(data.answer);
+            });
+    });
+</script>
+</html>

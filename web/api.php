@@ -90,7 +90,7 @@ if ($mainroute == "hello") // we want to say hello to the person passed in the "
     api_response($response);
 }
 
-if ($mainroute == "addroute") // addition with them in the route /add/X/Y
+if ($mainroute == "addroute") // addition with them in the route /addroute/X/Y
 {
     /* The add structure should be:
     /add/X/Y where we want to add X and Y together
